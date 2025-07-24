@@ -84,6 +84,11 @@ function EnterSafeZone(zone)
         end
     end
 
+    if zone.invincible then
+        SetEntityInvincible(PlayerPedId(), true)
+        SetPedCanBeTargetted(PlayerPedId(), false)
+    end
+
     if zone.vehicleSpeedLimit then
         CreateThread(function()
             while isInZone and currentZone == zone do
@@ -126,6 +131,11 @@ function ExitSafeZone(zone)
     if vehicle ~= 0 then
         ResetEntityAlpha(vehicle)
         SetEntityMaxSpeed(vehicle, GetVehicleHandlingFloat(vehicle, 'CHandlingData', 'fInitialDriveMaxFlatVel'))
+    end
+
+    if zone and zone.invincible then
+        SetEntityInvincible(PlayerPedId(), false)
+        SetPedCanBeTargetted(PlayerPedId(), true)
     end
 end
 

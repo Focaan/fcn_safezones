@@ -15,6 +15,7 @@ Config.Safezones = {
         transparentVehicles = true, -- Make vehicles transparent
         vehicleSpeedLimit = true, -- Limit vehicle speed in safezone
         speedLimit = 20.0, -- Speed limit in safezone (the value is in mp/h) (the vehicleSpeedLimit has to be on)
-        disableVehiclePlayerCollision = true -- disable vehicle-player collision in safezones
+        disableVehiclePlayerCollision = true, -- disable vehicle-player collision in safezones
+        invincible = true -- set "Godmode" to players inside
     },
 }
