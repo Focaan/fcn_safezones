@@ -4,7 +4,7 @@ lua54 "yes"
 
 author 'Focaan'
 description 'Safezone system with configurable options'
-version '1.0.0'
+version '1.0.2'
 
 shared_scripts {
     '@ox_lib/init.lua',
@@ -17,4 +17,8 @@ files {
 
 client_scripts {
     'client/*.lua'
+}
+
+server_scripts {
+    'server/*.lua'
 }
