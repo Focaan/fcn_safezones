@@ -38,7 +38,8 @@ Config.Safezones = {
         transparentVehicles = true,
         vehicleSpeedLimit = 30, -- mp/h
         disableVehiclePlayerCollision = true,
-        showMarker = true
+        showMarker = true,
+        invincible = true -- set "Godmode" to players inside
     },
     -- Add more safezones as needed
 }
